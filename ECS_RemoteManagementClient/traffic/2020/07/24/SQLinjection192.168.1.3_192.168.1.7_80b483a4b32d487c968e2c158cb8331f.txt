@@ -1,0 +1,9 @@
+GET /static/img/downM.png HTTP/1.1
+Host: 192.168.1.7:8804
+Connection: keep-alive
+Accept: image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/84.0.4147.71 Mobile/15E148 Safari/604.1
+Accept-Language: zh-cn
+Referer: http://192.168.1.7:8804/?username=%27%20union%20select
+Accept-Encoding: gzip, deflate
+

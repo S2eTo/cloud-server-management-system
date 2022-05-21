@@ -1,0 +1,1 @@
+pip install --index-url https://pypi.douban.com/simple -r requirements.txt && pause

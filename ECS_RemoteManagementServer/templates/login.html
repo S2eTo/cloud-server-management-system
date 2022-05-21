@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>登录-云服务器远程管理</title>
+    <link rel="shortcut icon" href="/static/img/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/notification.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        body {
+            background-image: url(/static/img/background.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+
+        .main {
+            width: 720px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            animation: fade-in .5s ease forwards;
+            font-size: 0;
+            {#box-shadow: 2px 1px 10px #0f2938;#}
+        }
+
+        .main .background {
+            width: 100%;
+        }
+
+        .main .form {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 80px 105px 105px 105px;
+            width: 266px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 48px;
+        }
+
+        .form-item {
+
+            margin-bottom: 52px;
+        }
+
+        .control {
+            border: none;
+            border-bottom: .1px solid #b9b9b9;
+            outline: none;
+            font-size: 15px;
+            /* height: 20px; */
+            display: block;
+            padding: 8px 1px;
+            width: 100%;
+        }
+        
+        .control:focus {
+            border-color: #2196F3;
+        }
+
+        label {
+            font-weight: 400;
+            color: #797979;
+            display: block;
+            /* margin-bottom: 20px; */
+            font-size: 14px;
+        }
+
+
+        .mask {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            opacity: .5;
+        }
+
+        .login-btn {
+            border: 1px solid #2187d8;
+            text-align: center;
+            padding: 10px;
+            border-radius: .324rem;
+            background: #2196F3;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+            display: block;
+            width: 100%;
+        }
+
+        @keyframes fade-in {
+            from {
+                transform: translate(-50%, -70%);
+                opacity: .5;
+            }
+
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+	<div class="mask"></div>
+	<div class="main">
+		<form class="form" action="javascript:login()" method="post">
+			<div class="title">登录</div>
+			<div class="form-item">
+				<label for="username">用户名</label>
+				<input type="text" name="username" id="username" class="control" value="AnonymousUser" required="required">
+			</div>
+			<div class="form-item">
+				<label for="password">密码</label>
+				<input type="password" name="password" id="password" class="control" required="required">
+			</div>
+			<input type="submit" class="login-btn" value="登录">
+		</form>
+		<img src="/static/img/login_background.png" alt="" class="background">
+	</div>
+    <div class="notification__list"></div>
+</body>
+</html>
+<script src="/static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/notification.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    function login () {
+        $.ajax({
+            url: '/login',
+            method: 'POST',
+            data: {
+                'username': $('#username').val(),
+                'password': $('#password').val()
+            },
+            success: function (res) {
+                if (res.code === 1) {
+                    notification.success(res.message);
+                    setTimeout(function () {
+                        location.replace('/')
+                    }, 2000)
+                }
+            },
+            error: function (res) {
+                notification.warning('登录失败');
+                try{
+                    notification.error(res.responseJSON.message)
+                }catch (e) {
+
+                }
+            }
+        })
+    }
+
+</script>

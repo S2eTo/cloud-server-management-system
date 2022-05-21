@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+/*@font-face{font-family: 'FiraCode-Medium';src : url('/static/img/FiraCode-Medium.otf');}*/
+
+
+:root {
+	--blue-color: #7AC5FF;
+	--green-color: #03f437;
+	--red-color: #f44336;
+	--block-title-color: rgba(0, 0, 0, 0);
+	--block-content-color: #fff;
+	--block-light-color: rgba(0, 0, 0, 0.125);
+	--server-open-color: #8dbf35;
+	--server-stop-color: #F46646;
+	--font-color: #000;
+	--list-wdith: 256px;
+	--description-color: #76838f;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: .8rem;
+}
+
+body,
+html {
+	width: 100%;
+	background: #f2edf3;
+	height: 100%;
+}
+
+input {
+	background: none;
+	border: 1px solid var(--block-light-color);
+}
+
+ul {
+	list-style: none;
+}
+
+span {
+	display: inline-block;
+	/* vertical-align: middle; */
+}
+
+.line {
+	width: 100%;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.content {
+    max-width: 1200px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding-top: 50px;
+}
+
+
+.header {
+	width: 100%;
+	background-color: #418cfa;
+	background-repeat: no-repeat;
+	padding: 10px;
+	font-size: 16px;
+	position: fixed;
+	font-weight: bold;
+	height: 50px;
+	z-index: 9;
+}
+
+.header .logo {
+	height: 100%;
+}
+
+.header .status {
+	float: right;
+	line-height: 30px;
+	color: #fff;
+}
+
+.header .status .connect_status {
+	width: 162px;
+	margin-left: 16px;
+}
+
+/* 内容 */
+.views .item.content {
+	position: absolute;
+	width: calc(100% - (var(--list-wdith) + 40px));
+	left: calc(var(--list-wdith) + 40px);
+	padding-top: 20px;
+	padding-right: 16px;
+	height: 100%;
+	overflow: auto;
+}
+
+.views .item.content::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 10px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+	height: 1px;
+	-webkit-box-shadow: inset 0 0 5px var(--block-light-color);
+}
+
+.views .item.content::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, #222222 25%, #222 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, #222 75%, #222);
+	background-color: #000;
+}
+
+.views .item.content::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	background: var(--block-light-color);
+}
+
+.content .content-item {
+	width: 100%;
+	/* position: absolute; */
+}
+
+
+.content .content-item .title {
+	font-size: 16pt;
+	padding: 16px;
+	background: var(--block-title-color);
+	font-weight: 500;
+	color: #000;
+
+}
+
+.content-views {
+	background: var(--block-content-color);
+	padding: 2.5rem 2.5rem;
+	width: 100%;
+	border-radius: 0.3125rem;
+	position: relative;
+	/* height: 500px; */
+}
+
+/* 命令 */
+.command {
+	background: none;
+	color: #fff;
+	border: 1px solid var(--block-light-color);
+	display: inline-block;
+	width: 100%;
+	padding: 10px 12px;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.btn {
+	background: none;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+	color: #fff;
+	border: 1.5px solid #fff;
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1;
+	font-family: "ubuntu-bold", sans-serif;
+	padding: 0.875rem 2.5rem;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	-ms-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+	border-radius: 0.4125rem;
+}
+
+.btn:hover {
+	opacity: .8;
+}
+
+.btn-primary {
+	background: linear-gradient(to right, #da8cff, #9a55ff);
+}
+
+.btn-success {
+	background: linear-gradient(to right, #84d9d2, #07cdae);
+}
+
+.btn-danger {
+	background: linear-gradient(to right, #ffbf96, #fe7096)
+}
+
+.remove {
+	display: none;
+}
+
+.response {
+	max-height: 500px;
+	overflow: auto;
+	padding: 12px 0;
+}
+
+.response::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.response .item {
+	color: #d0d0d0;
+}
+
+.server_status {
+	margin-bottom: 10px;
+}
+
+#status_icon {
+	display: inline-block;
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	background-image: url(/static/img/StatusSprite1.png);
+	background-repeat: no-repeat;
+	vertical-align: top;
+}
+
+.statusText {
+	height: 32px;
+	display: inline-block;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-left: 8px;
+	color: #000;
+	font-size: 10pt;
+}
+
+.status_go {
+	background-position: -48px 0;
+}
+
+.status_stop {
+	background-position: 0 0;
+}
+
+.status_wait {
+	background-position: -24px 0;
+}
+
+input {
+	font-family: "ubuntu-regular", sans-serif;
+	font-size: 0.8125rem;
+	display: inline-block;
+	line-height: 1;
+	color: #495057;
+	background-color: #ffffff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 2px;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	padding: 0.875rem 1.375rem;
+}
+
+.settings .config-item {
+	padding: 20px 0;
+	border-bottom: 1px solid var(--block-light-color);
+}
+
+.settings .config-item:last-child {
+	border-bottom: none;
+}
+
+.settings .label {
+	vertical-align: middle;
+	width: 282px;
+}
+
+.settings .label .setting-label-name {
+	font-size: 14pt;
+	margin-bottom: 5px;
+}
+
+.settings .label .setting-label-description {
+	font-size: 8pt;
+	color: var(--description-color);
+	margin-right: 10px;
+}
+
+.Note {
+	color: #fe7c96
+}
+
+.content-item.control {
+    position: relative;
+}
+
+.views .content .content-item.control .content-views {
+    background: none;
+    padding: 0;
+    font-size: 0;
+    height: calc(100% - 93.6px);
+}
+
+.control-item.command-prompt {
+    /* margin-left: 20px; */
+    position: relative;
+    height: 500px;
+}
+
+.control-item.command-prompt #cmd {
+    font-family: "Consolas";
+    font-size: .9rem;
+    margin-top: 10px;
+    width: 100%;
+    /* bottom: 0; */
+    position: absolute;
+    bottom: 0;
+}
+
+.control-item.command-prompt .command-response {
+    overflow: auto;
+    height: 100%;
+    /* position: absolute; */
+    width: 100%;
+    /* bottom: 48px; */
+    /* height: 100px; */
+    background: #000;
+    padding: 15px;
+}
+
+.views .content .content-item.control .content-views .control-item.client-list {
+    overflow: auto;
+    width: 250px;
+}
+
+.control-item.command-prompt .command-response::-webkit-scrollbar,
+.views .content .content-item.control .content-views .control-item.client-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+.command-response .command-response-item,
+.command-response .command-response-item * {
+    font-size: 1.1rem;
+    color: #dadada;
+    font-family: "Consolas";
+}
+
+.notclient {
+    margin-top: 10px;
+    color: #fe7096;
+    font-weight: bold;
+}

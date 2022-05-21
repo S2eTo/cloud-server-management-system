@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.traffic .content-views {
+    margin-bottom: 20px;
+}
+
+.traffic .traffic__title {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #76838f;
+}
+
+.traffic .content-views:last-child {
+    margin-bottom: 0;
+    height: calc(100% - 206px - 40px - 85px);
+    position: absolute;
+}
+
+
+.attacks__cumulative {
+    display: flex;
+
+}
+
+.attacks__cumulative .attacks__cumulative-item {
+    display: inline-block;
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.attacks__cumulative .attacks__cumulative-item:first-child {
+    padding-left: 0;
+}
+
+.attacks__cumulative .attacks__cumulative-item:last-child {
+    padding-right: 0;
+}
+
+.attacks__cumulative .attacks__cumulative-item .ck {
+    background: #f9f9fa;
+    padding: 20px 0;
+}
+
+.attacks__cumulative .attacks__cumulative-item .ck {
+    background: #f9f9fa;
+    padding: 20px 0;
+}
+
+.attacks__cumulative .attacks__cumulative-item .ck .attacks__cumulative-item-label span {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.attacks__cumulative .attacks__cumulative-item .ck .attacks__cumulative-item-label span.iconfont {
+    color: #f56c6c;
+    font-size: 20px;
+}
+
+.attacks__cumulative .attacks__cumulative-item .ck .attacks__cumulative-item-value {
+    font-size: 1.7rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #616367;
+}

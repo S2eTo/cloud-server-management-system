@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+.content-item.status {
+	height: calc(100% - 20px);
+}
+
+#status_icon {
+	display: inline-block;
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	background-image: url(/static/img/StatusSprite1.png);
+	background-repeat: no-repeat;
+	vertical-align: top;
+}
+
+.statusText {
+	height: 32px;
+	display: inline-block;
+	line-height: 20px;
+	vertical-align: middle;
+	padding-left: 8px;
+	color: #000;
+	font-size: 10pt;
+}
+
+.status_go {
+	background-position: -48px 0;
+}
+
+.status_stop {
+	background-position: 0 0;
+}
+
+.status_wait {
+	background-position: -24px 0;
+}
+
+/* 系统硬件使用率 */
+.usage {
+	height: 104px;
+	font-size: 0;
+	/* width: 580px; */
+	margin-bottom: 10px;
+}
+
+.usage .item {
+	vertical-align: top;
+	height: 100%;
+	display: inline-block;
+}
+
+.usage .chats {
+	width: calc(100% - 111px);
+}
+
+.usage .chats div {
+	border: 1px solid var(--block-light-color);
+	height: 104px;
+}
+
+.usage .data-views {
+	width: 111px;
+	background: #e9ecef;
+	font-size: 13px;
+	padding: 32px 6px;
+	/* color: #0000008c; */
+}
+
+.usage .data-views .data-views-usage {
+	margin-bottom: 5px;
+	color: #747474;
+	font-family: "ubuntu-regular", sans-serif;
+}
+
+.usage .data-views .data-views-usage span {
+	color: #747474;
+	font-family: "ubuntu-regular", sans-serif;
+}
+
+.usage .data-views .data-views-usage.men-size {
+	padding-top: 5px;
+	font-size: 11px;
+}
+
+.usage .data-views .data-views-usage.men-size span {
+	font-size: .6rem;
+}
+
+.service_main_usage {
+	/* height: 40%; */
+	width: 100%;
+	background: #fff;
+	padding: 15px 20px 3px 20px;
+	border-radius: 0.3125rem;
+	margin-bottom: 20px;
+}
+
+.service_usage_label {
+	height: 19.2px;
+	margin-bottom: 1rem;
+}
+
+.service_usage_label .name {
+	font-size: 1.125rem;
+}
+
+.service_usage_label .cpu {
+	margin-left: 100px;
+    font-size: 9pt;
+    width: 125.7px;
+}
+
+.service_usage_label .ram {
+    margin-left: 10px;
+}
+
+.service_usage_label * {
+	font-size: 9pt;
+	vertical-align: middle;
+}
+
+.service_usage_label .legend-dots {
+	width: 16.2px;
+    height: 16.2px;
+    border-radius: 100%;
+    display: inline-block;
+    /* vertical-align: top; */
+    margin-right: .5rem;
+}
+
+#cpu-status {
+	width: 100%;
+	height: 200px;
+}
+
+#men-status {
+	width: 100%;
+	height: 250px;
+}

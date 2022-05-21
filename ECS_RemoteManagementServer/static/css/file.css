@@ -1,0 +1,90 @@
+.input__file {
+    display: inline-block;
+    position: relative;
+}
+
+.input__file,
+.input__file * {
+    cursor: pointer;
+    user-select: none;
+}
+
+.input__file input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.input__file .input__file-block {
+    background: #409EFF;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.input__file .input__file-block * {
+    vertical-align: middle;
+}
+
+.input__file .input__file-block img {
+    width: 22px;
+}
+
+.fileupload .content-views {
+    margin-bottom: 20px;
+}
+
+.fileupload .content-views:last-child {
+    margin-bottom: 0;
+    height: calc(100% - 102.5px - 40px - 85px);
+    position: absolute;
+}
+
+.fileupload .table__ {
+    height: calc(100% - 35.25px);
+}
+
+.file_upload_t * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.file_upload_t {
+    display: flex;
+}
+
+.file_upload_t .file_upload_t-item {
+    /* vertical-align: bottom; */
+    flex: 1;
+    line-height: 33px;
+}
+
+.file_upload_t .file_upload_t-item h2 {
+    font-size: 1rem;
+    margin-right: 17px;
+}
+
+.content-views_file-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+	border-radius: 10rem;
+	/* box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2); */
+	background: #afafaf;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	/* display: none; */
+}

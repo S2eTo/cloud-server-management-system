@@ -1,0 +1,12 @@
+GET /?username=%27%20union%20select HTTP/1.1
+Host: 10.9.145.22
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+qzhw-wnshtml-webviewsupport: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+qzhw-request-key: 8FACEF78-4DA1-4F83-9149-8E757179A239
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/17G68 QQ/8.4.10.666 V1_IPH_SQ_8.4.10_1_APP_A Pixel/750 MiniAppEnable SimpleUISwitch/1 QQTheme/2921 Core/WKWebView Device/Apple(iPhone 7) NetType/WIFI QBWebViewType/1 WKType/1
+webso-cache-load-time: 1604710059903
+Accept-Language: zh-cn
+Accept-Encoding: gzip, deflate
+

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+input {
+	border: 1px solid #ebedf2;
+	font-family: "ubuntu-regular", sans-serif;
+	font-size: 0.8125rem;
+	display: inline-block;
+	padding: 0.875rem 1.375rem;
+	line-height: 1;
+	color: #495057;
+	background-color: #ffffff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 2px;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	padding: 0.875rem 1.375rem;
+}
+
+.settings .config-item {
+	padding: 20px 0;
+	border-bottom: 1px solid var(--block-light-color);
+}
+
+.settings .config-item:last-child {
+	border-bottom: none;
+}
+
+.settings .label {
+	vertical-align: middle;
+	width: 282px;
+}
+
+.settings .label .setting-label-name {
+	font-size: 14pt;
+	margin-bottom: 5px;
+}
+
+.settings .label .setting-label-description {
+	font-size: 8pt;
+	color: var(--description-color);
+	margin-right: 10px;
+}
+
+.Note {
+	color: #fe7c96
+}
+

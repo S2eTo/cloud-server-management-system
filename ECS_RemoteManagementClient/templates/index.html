@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>云服务远程管理客户端</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../static/css/notification.css" />
+	</head>
+	<body>
+    <div class="header">
+        <img src="/static/img/header-login.png" alt="" class='logo'>
+        <div class="status">
+            <span class="ipaddress">本机IP: {{ ip }}</span>
+            <span class="connect_status">连接状态: <span>没有连接...</span></span>
+        </div>
+    </div>
+		<div class="item content">
+			<div class="content-item settings">
+				<div class="title">配置</div>
+				<div class="content-views">
+                    <div class="server_status">
+						<div id="status_icon" class="status_stop"></div>
+						<div class="statusText" id="status_statetext">没有连接...</div>
+					</div>
+					<div class="Note">
+						注意: 在重新重新连接之前，不会应用对这些设置的更改。
+					</div>
+					<div class="config-list">
+						<div class="config-item">
+							<span class="label">
+								<div class="setting-label-name">服务器地址</div>
+								<div class="setting-label-description">你可以在这里设置连接目标服务器对的IP地址, 默认为 127.0.0.1</div>
+							</span>
+							<input type="text" name="host" id="server_target" class="input-control" value="127.0.0.1">
+						</div>
+						<div class="config-item">
+							<span class="label">
+								<div class="setting-label-name">服务器端口</div>
+								<div class="setting-label-description">你可以在这里设置连接目标服务器的端口, 默认为 8888 </div>
+							</span>
+							<input type="number" name="port" id="server_port" class="input-control" value="8888">
+						</div>
+					</div>
+                    <div class="btn btn-success" style="margin-top: 20px;" id="connect">连接服务器</div>
+                    <div class="btn btn-danger" style="margin-top: 20px;" id="disconnect">断开连接</div>
+					<div class="btn btn-primary" style="margin-top: 20px;" id="set_options">保存设置</div>
+				</div>
+			</div>
+			<div class="content-item control">
+				<div class="title">控制台</div>
+				<div class="content-views">
+					<div class="control-item command-prompt">
+                        <div class="command-response" id="response">
+                            <div class="command-response-item">16:17:08 [127.0.0.1:8888] asdawdasasdawdads</div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="notification__list"></div>
+	</body>
+</html>
+<script src="/static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/socket.io.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/notification.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/reponse.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/socket.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/client.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/index.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+.content-item.control {
+	height: calc(100% - 20px);
+}
+
+.views .content .content-item.control .content-views {
+	background: none;
+	padding: 0;
+	font-size: 0;
+	height: calc(100% - 93.6px);
+}
+
+.views .content .content-item.control .content-views .control-item {
+	display: inline-block;
+	background: #fff;
+	vertical-align: top;
+	padding: 2.5rem 1.77rem;
+	border-radius: 0.3125rem;
+	height: 100%;
+	position: relative;
+}
+
+.control-item .client-title {
+	font-size: 1.125rem;
+	padding-bottom: 10px;
+}
+
+.client-item img {
+	vertical-align: middle;
+}
+
+span.client-item-info {
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+span.client-item-info span {
+	display: block;
+}
+
+.client-item {
+	cursor: pointer;
+	/* margin: 10px 0; */
+	/* border-radius: 0.3125rem; */
+	transition: all .2s ease;
+	position: relative;
+	border-bottom: 1px solid #f2edf3;
+	/* padding: .935rem 0; */
+}
+
+.client-item .client_info {
+	padding: 0.9375rem;
+}
+
+.client-item:hover {
+	background: #83878e05;
+	/* color: #fff !important; */
+	/* box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23); */
+}
+
+.client-item.out {
+	background: #fe7096;
+	color: #fff !important;
+}
+
+.client-item.active {
+	background: #90caf9;
+	color: #fff !important;
+}
+
+.client-item:hover * {
+	/*color: #fff !important;*/
+}
+
+.client-item .client-func {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	/* box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23); */
+	padding: .4rem 0;
+	display: none;
+}
+
+.client-item .client-func.show {
+	display: flex;
+}
+
+.client-item .client-func .client-func-item {
+	display: inline-block;
+	height: 100%;
+	flex: 1;
+	text-align: center;
+}
+
+.client-item .client-func .client-func-item .iconfont {
+	display: block;
+	font-size: 32px;
+	color: #5195ff;
+}
+
+.client-item .client-func .client-func-item span {
+
+user-select: none;
+
+color: #000;
+}
+
+.client-item .get_client_usage {
+	text-align: left;
+	font-size: .9rem;
+	margin-top: 5px;
+}
+
+.control-item.command-prompt {
+	margin-left: 20px;
+	width: calc(100% - 295px) !important;
+	/* display: none !important; */
+}
+
+.control-item.command-prompt #cmd {
+	/* width: 100%; */
+	font-family: "Consolas";
+	font-size: .9rem;
+	/* font-weight: bold; */
+	margin-top: 10px;
+	width: calc(100% - 2.5rem * 2);
+	position: absolute;
+	bottom: 2.5rem;
+}
+
+.control-item.command-prompt .command-response {
+	overflow: auto;
+	max-height: calc(100% - 48px - 2.5rem * 2);
+	position: absolute;
+	width: calc(100% - 2.5rem * 2);
+	bottom: calc(2.5rem + 48px);
+}
+
+.views .content .content-item.control .content-views .control-item.client-list {
+	/* overflow: auto; */
+	width: 275px;
+}
+
+.views .content .content-item.control .content-views .control-item.client-list ul {
+	height: 100%;
+	overflow: auto;
+	padding-right: 1px;
+}
+
+.command-response .command-response-item * {
+	font-size: 1.1rem;
+	/*padding: 5px 0;*/
+	color: var(--description-color);
+	font-family: "Consolas";
+}
+
+.notclient {
+	margin-top: 10px;
+	color: #fe7096;
+	font-weight: bold;
+}
+
+.client_usage_views {
+	margin-left: 20px;
+	width: calc(100% - 295px) !important;
+}
+
+#client_usage {
+	background: none;
+	padding: 0;
+}
+
+#client_usage .client_main_usage {
+	height: 40%;
+	width: 100%;
+	background: #fff;
+	padding: 15px 20px 3px 20px;
+	border-radius: 0.3125rem;
+}
+
+#client_usage .client_main_usage #client_main_usage_charts {
+	height: calc(100% - 19.2px - 1rem);
+	width: 100%;
+}
+
+.client_usage_label {
+	height: 19.2px;
+	margin-bottom: 1rem;
+}
+
+.client_usage_label * {
+	font-size: 9pt;
+	vertical-align: middle;
+
+}
+
+.client_usage_label .close {
+	float: right;
+	cursor: pointer;
+}
+
+.client_usage_label .close .iconfont {
+	vertical-align: middle;
+	font-size: 19px;
+}
+
+.client_usage_label .close .iconfont,
+.client_usage_label .close span {
+	color: #ff6000;
+}
+
+.client_usage_label .legend-dots {
+	width: 16.2px;
+	height: 16.2px;
+	border-radius: 100%;
+	display: inline-block;
+	/* vertical-align: top; */
+	margin-right: .5rem;
+}
+
+.client_usage_label .name {
+	font-size: 1.125rem;
+}
+
+.client_usage_label .cpu {
+	margin-left: 100px;
+	font-size: 9pt;
+	width: 125.7px;
+}
+
+.client_usage_label .ram {
+	font-size: 9pt;
+	margin-left: 10px;
+}
+
+.client_usage_views .client_disk_usage {
+	font-size: 0;
+	padding-top: 16px;
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	padding-bottom: 2px;
+}
+
+.client_usage_views .client_disk_usage::-webkit-scrollbar-thumb  {
+	border-radius: 10rem;
+	/* box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2); */
+	background: #afafaf;
+}
+
+.client_usage_views .client_disk_usage::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	/* display: none; */
+}
+
+
+.client_usage_views .client_disk_usage .client_disk_item {
+	display: inline-block;
+	height: 100%;
+	width: 33.333%;
+	vertical-align: top;
+	/* border-radius: 13px; */
+	padding-right: 17px;
+	max-width: 432px;
+	min-width: 282px;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item:last-child {
+	padding-right: 0;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .client_disk_item_content {
+	background: #fff;
+	padding: 20px;
+	height: 100%;
+	border-radius: 0.3125rem;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .disk_name {
+	font-size: 1.125rem;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .charts-views {
+	height: calc(100% - 87px - 19.2px - .5rem);
+	width: 100%;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .info {
+	height: 87px;
+	/* background: #a5a5a5; */
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .info * {
+	font-size: 9pt;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .info .duv {
+	float: right;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .info .info-item {
+	margin-bottom: 1rem;
+}
+
+.client_usage_views .client_disk_usage .client_disk_item .info .legend-dots {
+	width: 16.2px;
+	height: 16.2px;
+	border-radius: 100%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: .5rem;
+}

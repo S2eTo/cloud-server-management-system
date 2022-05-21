@@ -1,0 +1,11 @@
+GET /static/img/games-banner-02.mp4 HTTP/1.1
+Host: 192.168.1.7:8804
+Accept-Language: zh-cn
+X-Playback-Session-Id: F9B3AECC-AB14-4439-899B-9218DB778CB9
+Range: bytes=0-1
+Accept: */*
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/84.0.4147.71 Mobile/15E148 Safari/604.1
+Referer: http://192.168.1.7:8804/?username=%27%20union%20select
+Accept-Encoding: identity
+Connection: Keep-Alive
+
